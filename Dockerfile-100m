@@ -1,4 +1,2 @@
 FROM ubuntu
-RUN mkdir /test
-RUN fallocate -l 100m /test/dumy
-RUN rm /test/dumy
+RUN mkdir /test && fallocate -l 100m /test/dumy && rm /test/dumy

@@ -1,9 +1,12 @@
-FROM ubuntu
+FROM ubuntu:18.04
+
 ENV DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get update
-RUN apt-get install httpd -y
-ADD hello.html /var/www/html/
-WORKDIR /var/www/html/
-RUN [ "/bin/bash", "-c", "echo hello2 >> hello2.html" ]
-EXPOSE 80
-CMD apachectl -DFOREGROUND
+RUN apt-get install -y apache2
+RUN apt-get install -y apache2-utils
+RUN apt-get clean
+
+EXPOSE 80 
+
+CMD [ "apachectl", "-D", "FOREGROUND" ]
