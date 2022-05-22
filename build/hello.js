@@ -1,12 +1,13 @@
 const http = require('http');
-const os = require('os');
+const hostname = '127.0.0.1';
+const port = 3000;
 
-var handler = function (request, response) {
-	console.log("Received request from " +
-		request.connection.remoteAddress);
-	response.writeHead(200);
-	response.end("Containser Hostname: " + os.hostname() + "\n");
-};
+const server = http.createServer((req, res) => {
+	res.statusCode = 200;
+	res.setHeader('Content-Type', 'text/plain');
+	res.end('Hello World');
+});
 
-var www = http.createServer(handler);
-www.listen(8080);
+server.listen(port, hostname, () => {
+	console.log('Server running at http://${hostname}:${port}/');
+});
