@@ -3,7 +3,7 @@ WORKDIR /myapp
 COPY helloworld.go .
 RUN go build -o helloworld .
 
-FROM alpind:latest
+FROM alpine:latest
 WORKDIR /myapp
 COPY --from=0 /myapp/helloworld .
 ENTRYPOINT [ "./helloworld" ]
