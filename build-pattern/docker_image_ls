@@ -1,2 +1,12 @@
-CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                  NAMES
-b67a37066c59   nginx     "/docker-entrypoint.…"   16 seconds ago   Up 15 seconds   0.0.0.0:8888->80/tcp   mywebserver
+REPOSITORY            TAG       IMAGE ID       CREATED          SIZE
+mywebserver           latest    8caa78c13dde   40 seconds ago   142MB
+multi-stage-runtime   latest    1b871f80452c   16 minutes ago   7.6MB
+multi-stage           v1        1b871f80452c   16 minutes ago   7.6MB
+multi-stage           v2        1b871f80452c   16 minutes ago   7.6MB
+helloworld-runtime    latest    b6e8e1b97f6b   24 minutes ago   7.6MB
+helloworld-build      latest    0a7a2dd65c1c   37 minutes ago   813MB
+helloworld            v1        0a7a2dd65c1c   37 minutes ago   813MB
+multi-stage-build     latest    83b04c856d4b   37 minutes ago   813MB
+alpine                latest    e66264b98777   3 days ago       5.53MB
+nginx                 latest    de2543b9436b   9 days ago       142MB
+golang                1.14      21a5635903d6   15 months ago    811MB
