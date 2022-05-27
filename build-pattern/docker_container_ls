@@ -1,2 +1,4 @@
 CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                  NAMES
-0aee760d04e4   nginx     "/docker-entrypoint.…"   22 seconds ago   Up 21 seconds   0.0.0.0:8080->80/tcp   mywebserver
+ea2c39816c68   centos    "/bin/bash"              46 seconds ago   Up 45 seconds                          mycentos
+fb89428e05bc   nginx     "/docker-entrypoint.…"   22 minutes ago   Up 22 minutes   0.0.0.0:9090->80/tcp   mywebserver2
+0aee760d04e4   nginx     "/docker-entrypoint.…"   46 minutes ago   Up 46 minutes   0.0.0.0:8080->80/tcp   mywebserver
