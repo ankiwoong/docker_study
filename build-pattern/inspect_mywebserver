@@ -220,6 +220,23 @@
                     "GlobalIPv6PrefixLen": 0,
                     "MacAddress": "02:42:ac:11:00:02",
                     "DriverOpts": null
+                },
+                "web-network": {
+                    "IPAMConfig": {},
+                    "Links": null,
+                    "Aliases": [
+                        "0aee760d04e4"
+                    ],
+                    "NetworkID": "5ab658211dcaa2b16a15ad8ff683b2ab3ab3c19fb10cb48ce6c7469cb8694cbc",
+                    "EndpointID": "bf37e9328e32560405c967da4bfe909ba9d55dc33df31094481637a925b4ed6e",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:12:00:02",
+                    "DriverOpts": {}
                 }
             }
         }
