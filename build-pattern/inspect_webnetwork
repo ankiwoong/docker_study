@@ -1,0 +1,38 @@
+[
+    {
+        "Name": "web-network",
+        "Id": "5ab658211dcaa2b16a15ad8ff683b2ab3ab3c19fb10cb48ce6c7469cb8694cbc",
+        "Created": "2022-05-27T19:51:47.335305414+09:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "172.18.0.0/16",
+                    "Gateway": "172.18.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "0aee760d04e47bc89bc3ca9b9486d7fbef11ab45b45a928b4c53c68ae03b4759": {
+                "Name": "mywebserver",
+                "EndpointID": "bf37e9328e32560405c967da4bfe909ba9d55dc33df31094481637a925b4ed6e",
+                "MacAddress": "02:42:ac:12:00:02",
+                "IPv4Address": "172.18.0.2/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {}
+    }
+]
