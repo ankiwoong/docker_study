@@ -1,0 +1,9 @@
+FROM golang:1.14
+WORKDIR /myapp
+COPY helloworld.go .
+RUN go build -o helloworld .
+
+FROM alpind:latest
+WORKDIR /myapp
+COPY --from=0 /myapp/helloworld .
+ENTRYPOINT [ "./helloworld" ]
