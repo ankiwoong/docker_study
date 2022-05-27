@@ -1,5 +1,6 @@
-CONTAINER ID   IMAGE       COMMAND                  CREATED          STATUS          PORTS                  NAMES
-ee4a5f9fc585   mysql:5.7   "docker-entrypoint.s…"   2 minutes ago    Up 2 minutes    3306/tcp, 33060/tcp    wordpressdb
-ea2c39816c68   centos      "/bin/bash"              12 minutes ago   Up 12 minutes                          mycentos
-fb89428e05bc   nginx       "/docker-entrypoint.…"   34 minutes ago   Up 34 minutes   0.0.0.0:9090->80/tcp   mywebserver2
-0aee760d04e4   nginx       "/docker-entrypoint.…"   58 minutes ago   Up 58 minutes   0.0.0.0:8080->80/tcp   mywebserver
+CONTAINER ID   IMAGE       COMMAND                  CREATED             STATUS             PORTS                   NAMES
+206b7f3d1cf2   wordpress   "docker-entrypoint.s…"   2 minutes ago       Up 2 minutes       0.0.0.0:32768->80/tcp   wordpress
+ee4a5f9fc585   mysql:5.7   "docker-entrypoint.s…"   8 minutes ago       Up 8 minutes       3306/tcp, 33060/tcp     wordpressdb
+ea2c39816c68   centos      "/bin/bash"              17 minutes ago      Up 17 minutes                              mycentos
+fb89428e05bc   nginx       "/docker-entrypoint.…"   40 minutes ago      Up 40 minutes      0.0.0.0:9090->80/tcp    mywebserver2
+0aee760d04e4   nginx       "/docker-entrypoint.…"   About an hour ago   Up About an hour   0.0.0.0:8080->80/tcp    mywebserver
