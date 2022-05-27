@@ -1,9 +1,9 @@
-FROM golang:1.14
+FROM golang:1.14 AS builder
 WORKDIR /myapp
 COPY helloworld.go .
 RUN go build -o helloworld .
 
-FROM alpine:latest
+FROM alpine:latest AS runtime
 WORKDIR /myapp
-COPY --from=0 /myapp/helloworld .
+COPY --from=builder /myapp/helloworld .
 ENTRYPOINT [ "./helloworld" ]
