@@ -1,10 +1,12 @@
-FROM node
+FROM node:12
 
 WORKDIR /app
 
-COPY . /app
+COPY package.json /app
 
 RUN npm install
+
+COPY . /app
 
 EXPOSE 80
 
