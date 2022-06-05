@@ -11,7 +11,7 @@ spec:
       name: content-vol                      # content-vol 볼륨을 통해서 보조 컨테이너와 내용을 공유
       readOnly: true
   - name: cloner                             # 보조 컨테이너 
-    image: myanjini/content-cloner:1.0
+    image: myanjini/content-cloner:2.0
     env:
     - name: CONTENTS_SOURCE_URL                             # 환경 변수로 설정 → 쉘 스크립트에서 사용
       value: https://github.com/ankiwoong/docker_study.git # 웹 페이지 소스 코드가 저장된 킷 허브 레포지터리 주소
