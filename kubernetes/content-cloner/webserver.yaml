@@ -14,7 +14,7 @@ spec:
     image: myanjini/content-cloner:1.0
     env:
     - name: CONTENTS_SOURCE_URL                             # 환경 변수로 설정 → 쉘 스크립트에서 사용
-      value: https://github.com/myanjini/content-cloner.git # 웹 페이지 소스 코드가 저장된 킷 허브 레포지터리 주소
+      value: https://github.com/ankiwoong/docker_study.git # 웹 페이지 소스 코드가 저장된 킷 허브 레포지터리 주소
     volumeMounts:  
     - mountPath: /data                                      # 깃 클론된 디렉터리 
       name: content-vol                                     # content-vol 볼륨을 통해서 메인 컨테이너와 내용을 공유
