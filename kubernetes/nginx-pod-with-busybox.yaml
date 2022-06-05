@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-nginx-pod
+spec:
+  containers:
+  - name: my-nginx-container
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+      protocol: TCP
+  - name: my-nginx-sidecar-container
+    image: busybox:latest
+    command: [ "tail" ]                         # tail -f /dev/null 명령을 실행
+    args: [ "-f", "/dev/null" ]                 # 컨테이너가 종료되지 않도록
+
