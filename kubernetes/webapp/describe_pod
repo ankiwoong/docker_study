@@ -1,0 +1,57 @@
+Name:         webapp
+Namespace:    default
+Priority:     0
+Node:         node1/192.168.111.101
+Start Time:   Sun, 05 Jun 2022 09:52:17 -0400
+Labels:       <none>
+Annotations:  cni.projectcalico.org/containerID: 2b29e3ca4dcf2767caa8ea8f46aceab60ab725cda1efd0276e675f783fd67010
+              cni.projectcalico.org/podIP: 10.233.90.10/32
+              cni.projectcalico.org/podIPs: 10.233.90.10/32
+Status:       Running
+IP:           10.233.90.10
+IPs:
+  IP:  10.233.90.10
+Containers:
+  webapp:
+    Container ID:   containerd://85eb94c1098d5c65598a7fd6ef87b86373898a4a80158c31798f9dfcd0c7e2fe
+    Image:          myanjini/webapp:1.0
+    Image ID:       docker.io/myanjini/webapp@sha256:f664e52e6fb6395e6e14f640b52b869aa4a170757de4e8dffa454c76f5741457
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Sun, 05 Jun 2022 09:52:29 -0400
+    Ready:          True
+    Restart Count:  0
+    Liveness:       http-get http://:3000/healthz delay=3s timeout=1s period=5s #success=1 #failure=3
+    Readiness:      http-get http://:3000/ready delay=15s timeout=1s period=6s #success=1 #failure=3
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-bpr95 (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-bpr95:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age                From               Message
+  ----     ------     ----               ----               -------
+  Normal   Scheduled  86s                default-scheduler  Successfully assigned default/webapp to node1
+  Normal   Pulling    86s                kubelet            Pulling image "myanjini/webapp:1.0"
+  Normal   Pulled     75s                kubelet            Successfully pulled image "myanjini/webapp:1.0" in 10.614629319s
+  Normal   Created    75s                kubelet            Created container webapp
+  Normal   Started    75s                kubelet            Started container webapp
+  Warning  Unhealthy  57s                kubelet            Readiness probe failed: HTTP probe failed with statuscode: 500
+  Warning  Unhealthy  22s (x3 over 32s)  kubelet            Liveness probe failed: HTTP probe failed with statuscode: 500
+  Normal   Killing    22s                kubelet            Container webapp failed liveness probe, will be restarted

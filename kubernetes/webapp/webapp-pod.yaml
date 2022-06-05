@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp
+spec:
+  containers:
+  - name: webapp
+    image: myanjini/webapp:1.0
+    livenessProbe:            # 애플리케이션 살아 있는지 여부를 확인
+      httpGet:
+        path: /healthz
+        port: 3000
+      initialDelaySeconds: 3  # 검사 개시 대기 시간
+      periodSeconds: 5        # 검사 간격
+    readinessProbe:           # 애플리케이션이 준비되었는지 여부를 확인
+      httpGet:
+        path: /ready
+        port: 3000
+      initialDelaySeconds: 15
+      periodSeconds: 6
+
