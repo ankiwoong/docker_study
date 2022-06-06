@@ -1,14 +1,5 @@
-NAME                              READY   STATUS                       RESTARTS   AGE
-pod/controller-6fb5bff444-rvm6j   1/1     Running                      0          2m10s
-pod/speaker-bz6zp                 0/1     CreateContainerConfigError   0          2m10s
-pod/speaker-kdsx6                 0/1     CreateContainerConfigError   0          2m10s
-pod/speaker-wftx9                 0/1     CreateContainerConfigError   0          2m10s
-
-NAME                     DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR                 AGE
-daemonset.apps/speaker   3         3         0       3            0           beta.kubernetes.io/os=linux   2m10s
-
-NAME                         READY   UP-TO-DATE   AVAILABLE   AGE
-deployment.apps/controller   1/1     1            1           2m10s
-
-NAME                                    DESIRED   CURRENT   READY   AGE
-replicaset.apps/controller-6fb5bff444   1         1         1       2m10s
+NAME                     TYPE                                  DATA   AGE
+controller-token-lz5p4   kubernetes.io/service-account-token   3      5m54s
+default-token-7d458      kubernetes.io/service-account-token   3      6m53s
+memberlist               Opaque                                1      14s
+speaker-token-rlvb8      kubernetes.io/service-account-token   3      5m54s
