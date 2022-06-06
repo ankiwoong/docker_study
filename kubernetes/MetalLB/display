@@ -1,5 +1,5 @@
-NAME                     TYPE                                  DATA   AGE
-controller-token-lz5p4   kubernetes.io/service-account-token   3      5m54s
-default-token-7d458      kubernetes.io/service-account-token   3      6m53s
-memberlist               Opaque                                1      14s
-speaker-token-rlvb8      kubernetes.io/service-account-token   3      5m54s
+NAME                                   READY   STATUS    RESTARTS   AGE
+hostname-deployment-7c58c4bd6f-gchwb   1/1     Running   0          19s
+hostname-deployment-7c58c4bd6f-pjq45   1/1     Running   0          19s
+hostname-deployment-7c58c4bd6f-wnlnf   1/1     Running   0          19s
+my-nginx-c54945c55-4rtfj               1/1     Running   0          4m32s
