@@ -1,0 +1,11 @@
+NAME          STATUS   ROLES                  AGE   VERSION   INTERNAL-IP       EXTERNAL-IP   OS-IMAGE                KERNEL-VERSION                CONTAINER-RUNTIME
+node/master   Ready    control-plane,master   45h   v1.23.7   192.168.111.100   <none>        CentOS Linux 7 (Core)   3.10.0-1160.66.1.el7.x86_64   containerd://1.6.4
+node/node1    Ready    <none>                 45h   v1.23.7   192.168.111.101   <none>        CentOS Linux 7 (Core)   3.10.0-1160.66.1.el7.x86_64   containerd://1.6.4
+node/node2    Ready    <none>                 45h   v1.23.7   192.168.111.102   <none>        CentOS Linux 7 (Core)   3.10.0-1160.66.1.el7.x86_64   containerd://1.6.4
+
+NAME                         READY   STATUS      RESTARTS      AGE   IP             NODE    NOMINATED NODE   READINESS GATES
+pod/test1                    1/1     Running     2 (16s ago)   81s   10.233.90.39   node1   <none>           <none>
+pod/test2-758d9c77bd-25cfh   0/1     Completed   1 (40s ago)   72s   10.233.90.40   node1   <none>           <none>
+pod/test2-758d9c77bd-b8hgq   0/1     Completed   1 (36s ago)   72s   10.233.96.36   node2   <none>           <none>
+pod/test2-758d9c77bd-bl6b4   0/1     Completed   1 (40s ago)   72s   10.233.90.41   node1   <none>           <none>
+pod/test2-758d9c77bd-qqlcs   0/1     Completed   1 (38s ago)   72s   10.233.96.35   node2   <none>           <none>
