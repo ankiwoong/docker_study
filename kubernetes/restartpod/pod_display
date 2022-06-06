@@ -1,0 +1,6 @@
+NAME                     READY   STATUS             RESTARTS      AGE     IP             NODE    NOMINATED NODE   READINESS GATES
+test1                    0/1     CrashLoopBackOff   3 (32s ago)   3m20s   10.233.90.39   node1   <none>           <none>
+test2-758d9c77bd-25cfh   0/1     CrashLoopBackOff   3 (30s ago)   3m11s   10.233.90.40   node1   <none>           <none>
+test2-758d9c77bd-b8hgq   0/1     CrashLoopBackOff   3 (18s ago)   3m11s   10.233.96.36   node2   <none>           <none>
+test2-758d9c77bd-bl6b4   0/1     CrashLoopBackOff   3 (22s ago)   3m11s   10.233.90.41   node1   <none>           <none>
+test2-758d9c77bd-qqlcs   0/1     CrashLoopBackOff   3 (22s ago)   3m11s   10.233.96.35   node2   <none>           <none>
