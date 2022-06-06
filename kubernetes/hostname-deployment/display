@@ -1,0 +1,4 @@
+NAME                                   READY   STATUS    RESTARTS   AGE   IP             NODE    NOMINATED NODE   READINESS GATES
+hostname-deployment-7c58c4bd6f-29h8n   1/1     Running   0          65s   10.233.90.42   node1   <none>           <none>
+hostname-deployment-7c58c4bd6f-5tkwf   1/1     Running   0          65s   10.233.90.43   node1   <none>           <none>
+hostname-deployment-7c58c4bd6f-jn7z7   1/1     Running   0          65s   10.233.96.37   node2   <none>           <none>
