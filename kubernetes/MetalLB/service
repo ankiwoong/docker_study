@@ -1,0 +1,4 @@
+NAME                           TYPE           CLUSTER-IP      EXTERNAL-IP     PORT(S)          AGE
+hostname-service-loadbanacer   LoadBalancer   10.233.53.111   192.168.10.11   8080:30391/TCP   16s
+kubernetes                     ClusterIP      10.233.0.1      <none>          443/TCP          17m
+my-nginx                       LoadBalancer   10.233.54.177   192.168.10.10   80:32126/TCP     6m7s
