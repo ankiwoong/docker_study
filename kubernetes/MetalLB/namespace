@@ -1,0 +1,7 @@
+NAME                   STATUS   AGE
+default                Active   47h
+kube-node-lease        Active   47h
+kube-public            Active   47h
+kube-system            Active   47h
+kubernetes-dashboard   Active   47h
+metallb-system         Active   23s
