@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config
+  namespace: metallb-system
+data:
+  config: |
+    address-pools:
+    - name: ip-pool
+      protocol: layer2
+      addresses:
+      - 192.168.10.10-192.168.10.250 # 외부로 노출할 수 있는 IP 범위
+
