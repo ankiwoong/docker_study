@@ -1,0 +1,41 @@
+Name:                   my-nginx-deployment
+Namespace:              default
+CreationTimestamp:      Mon, 06 Jun 2022 00:47:23 -0400
+Labels:                 <none>
+Annotations:            deployment.kubernetes.io/revision: 3
+                        kubernetes.io/change-cause: kubectl apply --filename=deployment-nginx.yaml --record=true
+Selector:               app=my-nginx
+Replicas:               3 desired | 3 updated | 3 total | 3 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=my-nginx
+  Containers:
+   my-nginx-container:
+    Image:        nginx:1.10
+    Port:         80/TCP
+    Host Port:    0/TCP
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   my-nginx-deployment-7b7d69ddc6 (3/3 replicas created)
+Events:
+  Type    Reason             Age                  From                   Message
+  ----    ------             ----                 ----                   -------
+  Normal  ScalingReplicaSet  4m45s                deployment-controller  Scaled up replica set my-nginx-deployment-7b7d69ddc6 to 3
+  Normal  ScalingReplicaSet  4m12s                deployment-controller  Scaled up replica set my-nginx-deployment-7788c5cdf5 to 1
+  Normal  ScalingReplicaSet  4m1s                 deployment-controller  Scaled down replica set my-nginx-deployment-7b7d69ddc6 to 2
+  Normal  ScalingReplicaSet  4m1s                 deployment-controller  Scaled up replica set my-nginx-deployment-7788c5cdf5 to 2
+  Normal  ScalingReplicaSet  3m49s                deployment-controller  Scaled down replica set my-nginx-deployment-7b7d69ddc6 to 1
+  Normal  ScalingReplicaSet  3m49s                deployment-controller  Scaled up replica set my-nginx-deployment-7788c5cdf5 to 3
+  Normal  ScalingReplicaSet  3m47s                deployment-controller  Scaled down replica set my-nginx-deployment-7b7d69ddc6 to 0
+  Normal  ScalingReplicaSet  112s                 deployment-controller  Scaled up replica set my-nginx-deployment-7b7d69ddc6 to 1
+  Normal  ScalingReplicaSet  110s                 deployment-controller  Scaled down replica set my-nginx-deployment-7788c5cdf5 to 2
+  Normal  ScalingReplicaSet  105s (x4 over 110s)  deployment-controller  (combined from similar events): Scaled down replica set my-nginx-deployment-7788c5cdf5 to 0
