@@ -1,0 +1,3 @@
+NAME                        TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE   SELECTOR
+hostname-service-nodeport   NodePort    10.233.0.180   <none>        8080:31842/TCP   14m   app=webserver
+kubernetes                  ClusterIP   10.233.0.1     <none>        443/TCP          46h   <none>
