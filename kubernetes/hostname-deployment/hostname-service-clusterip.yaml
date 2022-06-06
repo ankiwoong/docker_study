@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hostname-service-clusterip
+spec:
+  type: ClusterIP   # 지정하지 않으면 기본값으로 ClusterIP를 설정
+  selector:         # 어떤 라벨의 포드에 접근할 수 있게 만들 것인지를 지정
+    app: webserver  # 포드 라벨
+  ports:
+  - name: web-port
+    port: 8080      # 서비스의 IP에 접근할 때 사용할 포트
+    targetPort: 80  # selector 항목에서 정의한 라벨에 의해 접근 대상이 된 포드 내부에서 사용하고 있는 포트
+
