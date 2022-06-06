@@ -1,14 +1,16 @@
-# docker_study
+## setup
+
 |HOST|IP address  | arch | CPU | Memory | OS |
 |--|--|--|--|--|--|
 |master|192.168.111.100|X86_64|2core|4GiB |CentOS 7.6|
 |node1|192.168.111.101|X86_64|2core|4GiB |CentOS 7.6|
 |node2|192.168.111.102|X86_64|2core|4GiB |CentOS 7.6|
 
-## 1. Docker Install
-master, node1,node2 시스템에 도커 설치
+---
 
-[docs.docker.com](https://docs.docker.com/engine/install/centos/)
+## 1. Docker Install
+
+[docs-docker](https://docs.docker.com/engine/install/centos/)
 
 ```shell
 # yum install -y yum-utils
@@ -46,6 +48,10 @@ master, node1,node2 시스템에 도커 설치
       GitCommit:        de40ad0
 ```
 
-## 2. kubespray : https://developer-ankiwoong.tistory.com/1673
+## 2. kubernetes
 
-[kubernetes.io](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
+[docs-kubernetes](https://kubernetes.io/ko/docs/home/)
+
+[kubespray-kubernetes](https://developer-ankiwoong.tistory.com/1673)
+
+
