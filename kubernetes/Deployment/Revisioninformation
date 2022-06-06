@@ -1,5 +1,5 @@
 deployment.apps/my-nginx-deployment 
 REVISION  CHANGE-CAUSE
-1         kubectl apply --filename=deployment-nginx.yaml --record=true
 2         kubectl set image deployment my-nginx-deployment my-nginx-container=nginx:1.11 --record=true
+3         kubectl apply --filename=deployment-nginx.yaml --record=true
 
