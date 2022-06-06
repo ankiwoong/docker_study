@@ -10,4 +10,4 @@ spec:
   - name: web-port
     port: 8080      # 서비스의 IP에 접근할 때 사용할 포트
     targetPort: 80  # selector 항목에서 정의한 라벨에 의해 접근 대상이 된 포드 내부에서 사용하고 있는 포트
-
+  sessionAffinity: ClientIP
