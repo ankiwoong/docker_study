@@ -43,6 +43,6 @@ master, node1,node2, node3 시스템에 도커 설치
 		  Version:          0.18.0
 		  GitCommit:        fec3683
 
-## kubespray : https://developer-ankiwoong.tistory.com/1673
+## 2. kubespray : https://developer-ankiwoong.tistory.com/1673
 
 [kubernetes.io](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
