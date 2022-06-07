@@ -1,0 +1,7 @@
+NAME                                       READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/ingress-nginx-controller   1/1     1            1           89s
+
+NAME                                           READY   STATUS      RESTARTS   AGE
+pod/ingress-nginx-admission-create-zntwv       0/1     Completed   0          88s
+pod/ingress-nginx-admission-patch-wnh9f        0/1     Completed   0          88s
+pod/ingress-nginx-controller-f9d6fc8d8-g9wfm   1/1     Running     0          88s
