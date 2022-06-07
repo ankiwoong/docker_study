@@ -1,0 +1,3 @@
+NAME                                 TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)                      AGE
+ingress-nginx-controller             NodePort    10.233.1.159   <none>        80:31889/TCP,443:31286/TCP   2m
+ingress-nginx-controller-admission   ClusterIP   10.233.36.57   <none>        443/TCP                      2m
